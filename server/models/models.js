@@ -1,6 +1,7 @@
 export const user = {
   email: String,
-  name: String
+  name: String,
+  phoneNumber: String
 };
 
 export const child = {

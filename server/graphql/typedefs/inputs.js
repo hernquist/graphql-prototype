@@ -9,4 +9,9 @@ export default `
     userId: String,
     age: String
   }
+
+  input SignupUser {
+    phoneNumber: String!
+    email: String
+  }
 `;

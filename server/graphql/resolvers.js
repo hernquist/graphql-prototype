@@ -55,6 +55,27 @@ export default {
       return child
         ? `Successfully created child with ${prepare(child)._id}`
         : `Failure, child not created `;
+    },
+    signup: async (parent, { user }, { User }) => {
+      // 1. verify phoneNumber is not use
+      const { phoneNumber } = user;
+      console.log(phoneNumber);
+      const existingUser = await User.find({ phoneNumber });
+      console.log(existingUser);
+
+      if (existingUser.length > 0) {
+        // or throw error?
+        return { message: "Sorry, a user already exists with that email" };
+      }
+
+      // 2. create new record in mongo
+      const newUser = await User(user).save();
+      console.log(newUser);
+
+      // 3. return success message to user
+      return {
+        message: newUser._id ? "New user created!" : "There was a problem."
+      };
     }
   }
 };

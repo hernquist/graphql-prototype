@@ -1,8 +1,9 @@
 export default `
   type User {
     _id: String!
-    email: String!
-    name: String!
+    email: String
+    name: String
+    phoneNumber: String!
     child: [Child]
   }
 
@@ -11,5 +12,9 @@ export default `
     userId: String!
     name: String!
     age: String!
+  }
+
+  type SuccessMessage {
+    message: String
   }
 `;
