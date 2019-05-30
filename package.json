@@ -10,8 +10,8 @@
     "build-babel": "babel -d ./build ./server -s",
     "build": "yarn clean && yarn build-babel",
     "start": "yarn build && node ./build/index.js",
-    "heroku:build": "yarn build && heroku login && heroku create react-tree-maker-api",
-    "heroku:remote": "heroku git:remote -a react-tree-maker-api",
+    "heroku:build": "yarn build && heroku login && heroku create mom-bucks-api",
+    "heroku:remote": "heroku git:remote -a mom-bucks-api",
     "heroku:push": "git push heroku master"
   },
   "dependencies": {
