@@ -1,4 +1,4 @@
-export default `
+module.exports = `
   input InputUser {
     email: String!
     name: String!

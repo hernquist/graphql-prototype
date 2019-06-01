@@ -1,12 +1,12 @@
-import { makeExecutableSchema } from "graphql-tools";
+const { makeExecutableSchema } = require("graphql-tools");
 
 // import enums from './typedefs/enums';
 // import scalars from './typedefs/scalars';
-import types from "./typedefs/types";
-import inputs from "./typedefs/inputs";
-import queries from "./typedefs/queries";
-import mutations from "./typedefs/mutations";
-import resolvers from "./resolvers";
+const types = require("./typedefs/types");
+const inputs = require("./typedefs/inputs");
+const queries = require("./typedefs/queries");
+const mutations = require("./typedefs/mutations");
+const resolvers = require("./resolvers");
 
 const typeDefs = `
   ${inputs}
@@ -20,4 +20,4 @@ const schema = makeExecutableSchema({
   resolvers
 });
 
-export default schema;
+module.exports = schema;

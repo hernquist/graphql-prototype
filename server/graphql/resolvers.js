@@ -1,8 +1,8 @@
-// import { GraphQLScalarType } from "graphql";
-// import { Kind } from "graphql/language";
+// const { GraphQLScalarType } = require("graphql");
+// const { Kind } = require("graphql/language");
 // import bcrypt from "bcryptjs";
 // import jwt from "jsonwebtoken";
-import _ from "lodash";
+const _ = require("lodash");
 
 const prepare = obj => {
   if (obj) {
@@ -11,7 +11,7 @@ const prepare = obj => {
   return obj;
 };
 
-export default {
+module.exports = {
   // Date: new GraphQLScalarType({
   //   name: "Date",
   //   description: "Date custom scalar type",

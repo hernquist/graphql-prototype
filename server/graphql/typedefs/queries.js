@@ -1,4 +1,4 @@
-export default `
+module.exports = `
   type Query {
     getUsers: [User!]!
     user(email: String!): User!

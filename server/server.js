@@ -1,12 +1,12 @@
-import express from "express";
-import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
-import morgan from "morgan";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
-import jwt from "jsonwebtoken";
-import schema from "./graphql/schema";
-import { user, child } from "./models/models";
+const express = require("express");
+const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const schema = require("./graphql/schema");
+const { user, child } = require("./models/models");
 
 const { SECRET, DATABASE, NODE_ENV, PORT, LOCAL_DATABASE } = process.env;
 const database = NODE_ENV === "production" ? DATABASE : LOCAL_DATABASE;

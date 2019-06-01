@@ -1,11 +1,16 @@
-export const user = {
+const user = {
   email: String,
   name: String,
   phoneNumber: String
 };
 
-export const child = {
+const child = {
   name: String,
   userId: String,
   age: String
+};
+
+module.exports = {
+  user,
+  child
 };
