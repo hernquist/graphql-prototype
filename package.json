@@ -28,7 +28,7 @@
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.3",
     "graphql-tools": "^3.0.2",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mongodb": "^3.1.0-beta4",
     "mongoose": "^5.1.2",
     "morgan": "^1.9.0",
